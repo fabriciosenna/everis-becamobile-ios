@@ -8,6 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    fileprivate let viewModel = MainViewModel()
 
     @IBOutlet weak var UITableView: UITableView!
     override func viewDidLoad() {
@@ -15,6 +17,4 @@ class ViewController: UIViewController {
         navigationController?.navigationBar.isHidden = true
     }
 
-
 }
-
