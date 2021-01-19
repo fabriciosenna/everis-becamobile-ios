@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8mK-zk-ng2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8mK-zk-ng2">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -72,8 +73,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fag-Y0-Eye">
-                                <rect key="frame" x="16" y="13" width="41" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fag-Y0-Eye">
+                                <rect key="frame" x="16" y="13" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="JFs-Qd-zKy"/>
+                                    <constraint firstAttribute="height" constant="45" id="KGz-1g-32f"/>
+                                </constraints>
                                 <state key="normal" title="Voltar"/>
                                 <connections>
                                     <action selector="botaoVoltar:" destination="fJv-1O-CdR" eventType="touchUpInside" id="ZEQ-MS-oPy"/>
@@ -83,7 +88,7 @@
                                 <rect key="frame" x="16" y="51" width="288" height="517"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FUM-4Z-9te">
-                                        <rect key="frame" x="0.0" y="0.0" width="290" height="517"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="502"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QLw-HN-FIS">
                                                 <rect key="frame" x="68.5" y="8" width="153" height="230"/>
@@ -105,7 +110,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="QLw-HN-FIS" firstAttribute="centerX" secondItem="FUM-4Z-9te" secondAttribute="centerX" id="2ap-m5-7sr"/>
                                             <constraint firstItem="LRr-Er-Jeq" firstAttribute="top" secondItem="TRr-me-J6L" secondAttribute="bottom" constant="10" id="EHa-ST-gYm"/>
@@ -127,7 +132,8 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="ieb-Em-KLQ"/>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="TS0-Yv-o6m"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Fag-Y0-Eye" firstAttribute="leading" secondItem="TS0-Yv-o6m" secondAttribute="leading" constant="16" id="1d6-O1-0eK"/>
                             <constraint firstItem="7Fs-6o-1OK" firstAttribute="top" secondItem="Fag-Y0-Eye" secondAttribute="bottom" constant="8" id="J6J-k3-EbK"/>
@@ -136,7 +142,6 @@
                             <constraint firstItem="Fag-Y0-Eye" firstAttribute="top" secondItem="TS0-Yv-o6m" secondAttribute="top" constant="13" id="MaO-XV-K5g"/>
                             <constraint firstItem="TS0-Yv-o6m" firstAttribute="trailing" secondItem="7Fs-6o-1OK" secondAttribute="trailing" constant="15" id="My9-rV-0OS"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="TS0-Yv-o6m"/>
                     </view>
                     <navigationItem key="navigationItem" id="Apo-Of-rZY"/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -168,4 +173,9 @@
             <point key="canvasLocation" x="-146" y="132"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -36,9 +36,17 @@ class DescricaoFilmeViewController: UIViewController {
 
         self.labelTitulo.text = filme.title
         self.labelSinopse.text = filme.overview
+        
+        acessibility()
     }
     
     var filmeSelecionado:Result?
+    
+    func acessibility(){
+        imagemCapaFilme.accessibilityHint = "Capa do Filme"
+        labelTitulo.accessibilityHint = "\(String(describing: filmeSelecionado?.title))"
+        labelSinopse.accessibilityHint = "\(String(describing: filmeSelecionado?.overview))"
+    }
 
     
     @IBAction func botaoVoltar(_ sender: UIButton) {
